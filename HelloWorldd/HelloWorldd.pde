@@ -1,8 +1,8 @@
 //Global Variables
 char z, y;
 String d, e, f, g, ten, h, one;
-int skipCount=2;
-float decimal=1.0; //must inslude a zero decimal or compiler reads as INTEGER
+int two, skipCount=2, twenty;
+float decimal=1.0, thirty; //must include a zero decimal or compiler reads as INTEGER
 //
 void setup()
 {
@@ -16,6 +16,8 @@ void setup()
   f = "count";
   g = "to";
   ten = "10000";
+  twenty = 10000;
+  thirty = 1000000000000.0; //12 zeros
   h = "by";
   one = "1";
   two = 1;
@@ -25,10 +27,12 @@ void setup()
 //
 void draw()
 {
-  two+=skipCount;
+  two*=skipCount; //+=, -=, *=, /=
   println(d+z, e, f, g, ten+y, h, str(two)+z);
-  // 
-  println(d+z, e, f, g, one+y, "backwards from" , ten+z);
+  twenty/=skipCount; // Formula to count backwards from 10000 //ten-1, ten--, ten-=1
+  println(d+z, e, f, g, one+y, "backwards from", str(twenty)+z);
+  thirty/=skipCount; // Formula to count backwards from 10000 //ten-1, ten--, ten-=1
+  println(d+z, e, f, g, one+y, "backwards from", str(thirty)+z);
 }//End draw
 //
 void keyPressed() {
