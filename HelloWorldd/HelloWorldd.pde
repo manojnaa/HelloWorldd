@@ -2,6 +2,7 @@
 char z, y;
 String d, e, f, g, ten, h, one;
 int skipCount=2;
+float decimal=1.0; //must inslude a zero decimal or compiler reads as INTEGER
 //
 void setup()
 {
@@ -18,14 +19,16 @@ void setup()
   h = "by";
   one = "1";
   two = 1;
-  println(d+z, e, f, g, ten+y, h, str(two)+z); //Casting, making an INTEGER into a STRING 
-  println("One plus two is", int(one)+two); //Casting is int(one), to change STRING to INTEGER
+  //println(d+z, e, f, g, ten+y, h, str(two)+z); //Casting, making an INTEGER into a STRING 
+  //println("One plus two is", int(one)+two); //Casting is int(one), to change STRING to INTEGER
 }//End setup
 //
 void draw()
 {
-  two+=1; // two+1, two++, two+=1
+  two+=skipCount;
   println(d+z, e, f, g, ten+y, h, str(two)+z);
+  // 
+  println(d+z, e, f, g, one+y, "backwards from" , ten+z);
 }//End draw
 //
 void keyPressed() {
