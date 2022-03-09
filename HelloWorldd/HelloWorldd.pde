@@ -1,3 +1,15 @@
+//Global Variables
+//
+void setup() {}//End setup
+//
+void draw() {}//End draw
+//
+void keyPressed() {}// End keyPressed
+//
+void mousePressed() {}//End mousePressed
+//
+// What we will copy and paste from the Static Program
+/*
 println("Hello World");
 String firstSentence = "You said Hello!";
 String secondSentence ="Manojna T counts to 10, by 1.";
