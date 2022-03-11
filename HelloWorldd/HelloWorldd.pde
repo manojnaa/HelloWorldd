@@ -6,18 +6,18 @@ float decimal=1.0, thirty; //must include a zero decimal or compiler reads as IN
 //
 void setup()
 {
-  String secondSentence = "manojna can't count to 10, by 1."; //Local Variables
+  String secondSentence = "manojna hates counting to 10, by 1."; //Local Variables
   //println(secondSentence);
   //Populations, Declaration, Valuing
-  z = '.';
+  z = ',';
   y = ',';
   d = "manojna";
-  e = "can't";
-  f = "count";
+  e = "hates";
+  f = "counting";
   g = "to";
-  ten = "10000";
-  twenty = 10000;
-  thirty = 1000000000000.0; //12 zeros
+  ten = "1000";
+  twenty = 1000;
+  thirty = 1000000.0; //6 zeros
   h = "by";
   one = "1";
   two = 1;
@@ -51,6 +51,6 @@ void mousePressed() {
  
  //
 /*Note: the computer is adding ASCII Values
- Period has an ASCII Value of 46
- So, int(one)+two+z = 1 + 1 + 46
+ Period has an ASCII Value of 18
+ So, int(one)+two+z = 1 + 1 + 18
  */
