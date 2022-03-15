@@ -1,13 +1,16 @@
 /* Note: 
  Fix rectangle drawing bug, population bug
  Add liseners: keyboard and mouse
+ Remember to add a black background() to rightMouseButton
+ See: https://processing.org/reference/mouseButton.html
+ Prototype small program to verify mouseClicking
  */
 
 //Global Variables
-int x = width*1/4, y = height*1/4, rectWidth = width*1/2, rectHeight = height*1/2;
+int x, y, rectWidth, rectHeight;
 int backgroundBlue;
 int strokeRest=1;
-int thin=width*1/50, thick=2*thin;
+int thin, thick;
 color strokeColour, fillColour;
 color yellow=#F8FC03, purple=#FA00F6, whiteReset=#FFFFFF, blackReset=#000000;
 // Colour design must limit blue as much as possible ... notice purple
@@ -18,6 +21,13 @@ void setup()
 {
   size(700, 500); //Display Geometry (Orientations): Square, Landscape, Portrait
   //fullScreen(); //displayWidth, displayHeigth
+  //Population
+  x = width*1/4;
+  y = height*1/4;
+  rectWidth = width*1/2;
+  rectHeight = height*1/2;
+  thin = width*1/50;
+  thick = 2*thin;
   println("Canvas Size", width, height);
   println("Display", "width: ", displayWidth, " height: ", displayHeight);
 }//End setup
@@ -40,7 +50,6 @@ void draw()
     backgroundBlue = int( random(255) );
     strokeColour = yellow;
     fillColour = purple;
-    println("here", backgroundBlue);
   } //End Night Mode
   //
   background( color(random(0, 255), random(255), backgroundBlue) );
