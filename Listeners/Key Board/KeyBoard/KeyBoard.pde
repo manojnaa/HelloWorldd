@@ -1,9 +1,10 @@
 //Global Variables
-Boolean nightMode=false;
+Boolean nightMode=true;
 //
 void setup() 
 {
   size(700,500)
+  //fullScreen();
 }//End setup
 //
 void draw()
